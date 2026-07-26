@@ -4,25 +4,23 @@
 class Solution {
     public void moveZeroes(int[] nums) {
         
-        int j = 0;
+        int slow = 0;
 
-        for(int i=0; i<nums.length; i++){
+        for(int fast = 0; fast < nums.length; fast++){
 
-            if(nums[i] != 0){
+            if(nums[fast] != 0){
 
-                swap(nums, i, j);
-                j++;
-                
+                swap(slow, fast, nums);
+                slow++;
             }
         }
 
     }
 
-    private void swap(int[] nums, int i, int j){
+    private void swap(int slow, int fast, int[] nums){
 
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-
+        int temp = nums[slow];
+        nums[slow] = nums[fast];
+        nums[fast] = temp;
     }
 }
