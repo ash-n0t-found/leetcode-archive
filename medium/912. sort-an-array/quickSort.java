@@ -1,4 +1,5 @@
 // Randomized quicksort + Hoare partition
+// time: expected = O(nlogn) and space = O(logn)
 
 class Solution {
 
