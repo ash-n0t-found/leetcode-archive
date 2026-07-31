@@ -1,3 +1,5 @@
+// time = O(nlogn) and space = O(n)
+
 class Solution {
     public int[] sortArray(int[] nums) {
         
